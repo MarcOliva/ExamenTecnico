@@ -15,7 +15,7 @@ class Course(course: JsonObject) : Serializable {
 
 
     companion object {
-        private val NAME = "name"
-        private val CODE = "code"
+        private val NAME = "curso"
+        private val CODE = "código"
     }
 }
