@@ -1,4 +1,4 @@
-package com.oliva.marc.examentecnico.model
+package com.oliva.marc.examentecnico.model.Entity
 
 import com.google.gson.JsonObject
 import java.io.Serializable
