@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".view.adapter.DetailCourseActivity">
 
+    <TextView
+        android:id="@+id/state_matricula_textview"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/state_matricula_textview"
+        android:id="@+id/description_course_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/matriculate_button"
+        app:layout_constraintTop_toBottomOf="@id/description_course_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Matriculate"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

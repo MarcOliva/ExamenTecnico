@@ -6,9 +6,9 @@ import com.oliva.marc.examentecnico.model.Entity.User
 interface CourseView {
     fun showCourses(courses:ArrayList<Course>)
     fun setUserData(user: User)
-    fun setState(state: Int?)
+
 
     fun getUserData()
     fun getCourses()
-    fun getState()
+
 }

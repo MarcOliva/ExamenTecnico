@@ -20,9 +20,6 @@ class CoursePresenterImpl(val courseView: CourseView)  :
         courseInteractor.getUserData()
     }
 
-    override fun getState() {
-        courseInteractor.getState()
-    }
 
     //views methods
     override fun showCourses(courses: ArrayList<Course>) {
@@ -33,8 +30,5 @@ class CoursePresenterImpl(val courseView: CourseView)  :
         courseView.setUserData(user)
     }
 
-    override fun setState(state: Int?) {
-       courseView.setState(state)
-    }
 
 }

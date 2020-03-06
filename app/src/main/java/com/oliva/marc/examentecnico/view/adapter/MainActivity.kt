@@ -8,11 +8,14 @@ import com.oliva.marc.examentecnico.model.Entity.Course
 import com.oliva.marc.examentecnico.model.Entity.User
 import com.oliva.marc.examentecnico.presenter.CoursePresenter
 import com.oliva.marc.examentecnico.presenter.Impl.CoursePresenterImpl
+import com.oliva.marc.examentecnico.presenter.Impl.StatePresenterImpl
+import com.oliva.marc.examentecnico.presenter.StatePresenter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),
-    CourseView {
+    CourseView ,StateView{
     private var coursePresenter : CoursePresenter?=null
+    private var statePresenter :StatePresenter? =null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -26,12 +29,14 @@ class MainActivity : AppCompatActivity(),
     private fun ui(){
        coursePresenter =
            CoursePresenterImpl(this)
+        statePresenter=StatePresenterImpl(this)
     }
 
     override fun showCourses(courses: ArrayList<Course>) {
         courses_recyclerview.addItemDecoration(DividerItemDecoration(this,DividerItemDecoration.VERTICAL))
         courses_recyclerview.adapter =
             CourseRecyclerViewAdapter(
+                this@MainActivity,
                 courses
             )
     }
@@ -58,7 +63,7 @@ class MainActivity : AppCompatActivity(),
     }
 
     override fun getState() {
-        coursePresenter?.getState()
+        statePresenter?.getState()
     }
 
 
